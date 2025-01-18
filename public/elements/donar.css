@@ -1,0 +1,113 @@
+body {
+	background: linear-gradient(skyblue, lightgreen);
+	font-weight: 700;
+}
+label {
+	font-size: larger;
+}
+.form-control:focus,
+.form-select:focus {
+	border-color: #5ba4f862;
+	box-shadow: 0 0 5px 3px #5ba4f833;
+}
+.form-title::placeholder {
+	color: #ff385c !important;
+}
+
+.row input::placeholder,
+.row textarea::placeholder {
+	opacity: 0.5;
+}
+/* Choose Location Button */
+#choose-location-btn {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#choose-location-btn img {
+	margin-right: 10px;
+}
+
+/* Overlay */
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+/* Map Container */
+#map-container {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	height: 60%;
+	z-index: 1000;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+	border: 2px solid #ccc;
+}
+#select-loc {
+	position: relative;
+	padding: 0.3rem 0.6rem;
+	color: white;
+	border: 1px solid rgb(0, 123, 255);
+	background-color: rgb(0, 123, 255);
+	border-radius: 0.8rem;
+}
+
+.select-loc-class {
+	display: flex;
+	flex-direction: row-reverse;
+}
+/* Remove unwanted margins from form controls */
+.product-row .col-md-4 {
+	margin-bottom: 0 !important; /* No bottom margin for columns */
+}
+
+.product-row .form-control {
+	margin-bottom: 0px; /* Minimal spacing between inputs */
+}
+
+.product-row {
+	margin-bottom: 0px; /* Space after the entire row */
+}
+
+.custom-hr {
+	border: none;
+	height: 2px;
+	background: #000000; /* Customize color */
+	margin: 10px 0; /* Adjust spacing */
+}
+
+@media (max-width: 768px) {
+	/* .form-select {
+		width: 70%;
+		font-size: 12.5px;
+	} */
+
+	#map {
+		width: 70vw; /* 70% of viewport width */
+		height: 50vh; /* 70% of viewport height */
+	}
+	#map-container {
+		width: 70vw; /* 70% of viewport width */
+		height: 50vh; /* 70% of viewport height */
+	}
+}
